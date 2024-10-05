@@ -21,10 +21,6 @@
             z-index: 0;
         }
 
-
-
-
-
         /* Carousel styling */
         .carousel-container {
             display: flex;
@@ -191,6 +187,7 @@
 
     <!-- Book Display Section Start -->
     <section class="bg-black text-white mt-28 p-4 relative">
+
         <body class=" font-sans">
             <div class="container mx-auto px-4 py-12">
                 <div class="flex flex-col md:flex-row items-center justify-between  p-8 rounded-lg shadow-lg">
@@ -201,13 +198,14 @@
                             <h1 class="text-5xl text-red-500 mb-6">COLLECTION</h1>
                         </div>
                         <div>
-                            <button class="bg-transparent bg-white text-black font-semibold py-2 px-4 border border-white hover:border-transparent rounded flex items-center">
-                              SHOP NOW 
-                              <i class="fa-solid fa-arrow-right"></i>
+                            <button
+                                class="bg-transparent bg-white text-black font-semibold py-2 px-4 border border-white hover:border-transparent rounded flex items-center">
+                                SHOP NOW
+                                <!-- <i class="fa-solid fa-arrow-right"></i> -->
                             </button>
-                          </div>
-                          
-                        
+                        </div>
+
+
                     </div>
                     <div class="flex flex-col md:flex-row items-center ">
                         <img src="https://i.ibb.co.com/dm8VgMx/img-8.png" alt="Choose Your Enemies Wisely"
@@ -223,8 +221,29 @@
             </div>
             <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.min.js" defer></script>
     </section>
-
     <!-- Book Display Section End -->
+
+    <!-- Main Section -->
+    <section class="relative bg-red-600 h-[450px] md:h-[500px] lg:h-[340px]">
+        <div class="">
+            <div class="absolute top-24 left-5 md:top-72 md:left-10 lg:top-10">
+                <div class="quote-background ml-10 top-24">“</div>
+            </div>
+
+
+            <div class="absolute top-52 left-5 md:top-96 md:left-20 lg:top-20 max-w-[90%] sm:max-w-[500px]">
+                <p class="mission-text">
+                    OUR MISSION IS TO ENLIGHTEN, ENTERTAIN AND EMPOWER CURRENT AND FUTURE LEADERS AROUND THE WORLD.
+                </p>
+            </div>
+        </div>
+
+        <div class="absolute -top-9  right-5 md:-top-16 md:right-20 person-image">
+            <img src="https://i.ibb.co/bvGLptH/img-5.png" alt="Person"
+                class="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[400px] object-cover">
+        </div>
+    </section>
+    <!-- Main Section End -->
 
 </body>
 
