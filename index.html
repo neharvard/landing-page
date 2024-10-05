@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTMERCH Landing Page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <style>
+        /* "Future Looks Bright" styling */
+        .future-bright {
+            font-family: "Roboto", sans-serif;
+            font-weight: bold;
+            color: rgba(218, 209, 209, 0.838);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        
+
+        /* Carousel styling */
+        .carousel-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding-bottom: 10px;
+        }
+
+        .carousel-item {
+            flex: 0 0 auto;
+            scroll-snap-align: start;
+        }
+
+        .carousel-item img {
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+
+        /* Card body and prices */
+        .card-body {
+            text-align: center;
+        }
+
+        .price-old {
+            text-decoration: line-through;
+        }
+
+        .price-new, .price-old {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            color: white;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            color: white;
+        }
+
+        .btn-circle {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-red-500">
+
+    <!-- Header section Start-->
+    <header class="text-white p-4 relative">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center ml-4 md:ml-12">
+                <img class="w-8 h-8 md:w-10 md:h-10" src="https://i.ibb.co/7W7rW7L/logo.png" alt="Logo" style="filter: brightness(0) invert(1);" />
+                <span class="text-3xl md:text-5xl font-bold ml-2">VTMERCH</span>
+            </div>
+            <div class="text-3xl mr-4 md:mr-12">&#9776;</div>
+        </div>
+
+        <div class="future-bright absolute text-center">
+            FUTURE LOOKS BRIGHT!
+        </div>
+
+        <!-- Carousel Section -->
+        <div class="mt-40 sm:mt-40 md:mt-40 carousel-container ml-4 sm:ml-12">
+            <!-- Slide 1 -->
+            <div class="carousel-item">
+                <div class="card">
+                    <figure>
+                        <img src="https://i.ibb.co/fQpDGSH/img-9.png" alt="Item 1" />
+                    </figure>
+                    <div class="card-body items-center">
+                        <h2 class="card-title">Army Green Active Short Sleeve</h2>
+                        <p ><span class="price-new">$34.95</span> <span class="price-old">$39.95</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="card">
+                    <figure>
+                        <img class="rounded-md" src="https://i.ibb.co/tBvCmyd/img-6.jpg" alt="Item 2" />
+                    </figure>
+                    <div class="card-body items-center">
+                        <h2 class="card-title">Casual Black T-Shirt</h2>
+                        <p ><span class="price-new">$29.99</span> <span class="price-old">$35.99</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="card">
+                    <figure>
+                        <img src="https://i.ibb.co/fQpDGSH/img-9.png" alt="Item 3" />
+                    </figure>
+                    <div class="card-body items-center">
+                        <h2 class="card-title">Sporty Hoodie</h2>
+                        <p ><span class="price-new">$44.95</span> <span class="price-old">$49.95</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <div class="card">
+                    <figure>
+                        <img src="https://i.ibb.co/tBvCmyd/img-6.jpg" alt="Item 4" />
+                    </figure>
+                    <div class="card-body items-center">
+                        <h2 class="card-title text-center">Stylish Cap</h2>
+                        <p class=""><span class="price-new">$19.99</span> <span class="price-old">$24.99</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header Section End -->
+
+</body>
+
+</html>
+
+
+
