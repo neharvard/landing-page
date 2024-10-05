@@ -9,7 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
 
     <style>
@@ -22,7 +21,7 @@
             z-index: 0;
         }
 
-       
+
 
 
 
@@ -152,7 +151,8 @@
     <!-- Product Cards Section Start -->
     <section class="product-section mt-28 max-w-screen-xl mx-auto px-4 py-5">
         <div class="mb-6">
-            <h2 class="ml-3 text-5xl font-semibold">BUY 1 GET 1 FREE <br> ON <span class="font-light">BEST SELLING PRODUCTS</span></h2>
+            <h2 class="ml-3 text-5xl font-semibold">BUY 1 GET 1 FREE <br> ON <span class="font-open-sans">BEST SELLING
+                    PRODUCTS</span></h2>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7" id="product-cards"></div>
@@ -186,9 +186,46 @@
             // Call the function to generate the product cards on page load
             window.onload = generateProductCards;
         </script>
-        <!-- Product Cards Section End -->
-
     </section>
+    <!-- Product Cards Section End -->
+
+    <!-- Book Display Section Start -->
+    <section class="bg-black text-white mt-28 p-4 relative">
+        <body class=" font-sans">
+            <div class="container mx-auto px-4 py-12">
+                <div class="flex flex-col md:flex-row items-center justify-between  p-8 rounded-lg shadow-lg">
+                    <div class="mb-6 md:mb-0 flex flex-col items-center md:items-start">
+                        <div class="text-xl md:text-3xl font-bold">
+                            <h1 class="mb-3">PATRICK BET-DAVID'S</h1>
+                            <h1 class="text-5xl text-red-500 mb-3">SIGNED </h1>
+                            <h1 class="text-5xl text-red-500 mb-6">COLLECTION</h1>
+                        </div>
+                        <div>
+                            <button class="bg-transparent bg-white text-black font-semibold py-2 px-4 border border-white hover:border-transparent rounded flex items-center">
+                              SHOP NOW 
+                              <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                          </div>
+                          
+                        
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center ">
+                        <img src="https://i.ibb.co.com/dm8VgMx/img-8.png" alt="Choose Your Enemies Wisely"
+                            class="w-32 h-48 md:w-48 md:h-64 lg:w-full lg:h-72 mx-2">
+                        <img src="https://i.ibb.co.com/dm8VgMx/img-8.png" alt="Your Next Five Moves"
+                            class="w-32 h-48 md:w-48 md:h-64 lg:w-full lg:h-72 mx-2">
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <img src="https://i.ibb.co.com/9HnRTNf/pat-signature-White-1.png" alt="Patt Bet - David"
+                        class="mx-auto ml-5">
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.min.js" defer></script>
+    </section>
+
+    <!-- Book Display Section End -->
+
 </body>
 
 </html>
