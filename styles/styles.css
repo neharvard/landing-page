@@ -83,6 +83,11 @@
     font-weight: 900;
     font-style: italic;
 }
+.font-light {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+   
+}
 
 
 

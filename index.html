@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
 
     <style>
         /* "Future Looks Bright" styling */
@@ -20,7 +22,9 @@
             z-index: 0;
         }
 
-        
+       
+
+
 
         /* Carousel styling */
         .carousel-container {
@@ -51,7 +55,8 @@
             text-decoration: line-through;
         }
 
-        .price-new, .price-old {
+        .price-new,
+        .price-old {
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
             color: white;
@@ -68,13 +73,14 @@
     </style>
 </head>
 
-<body class="bg-red-500">
+<body class="">
 
     <!-- Header section Start-->
-    <header class="text-white p-4 relative">
+    <header class="bg-red-500 text-white p-4 relative">
         <div class="flex justify-between items-center">
             <div class="flex items-center ml-4 md:ml-12">
-                <img class="w-8 h-8 md:w-10 md:h-10" src="https://i.ibb.co/7W7rW7L/logo.png" alt="Logo" style="filter: brightness(0) invert(1);" />
+                <img class="w-8 h-8 md:w-10 md:h-10" src="https://i.ibb.co/7W7rW7L/logo.png" alt="Logo"
+                    style="filter: brightness(0) invert(1);" />
                 <span class="text-3xl md:text-5xl font-bold ml-2">VTMERCH</span>
             </div>
             <div class="text-3xl mr-4 md:mr-12">&#9776;</div>
@@ -93,8 +99,8 @@
                         <img src="https://i.ibb.co/fQpDGSH/img-9.png" alt="Item 1" />
                     </figure>
                     <div class="card-body items-center">
-                        <h2 class="card-title">Army Green Active Short Sleeve</h2>
-                        <p ><span class="price-new">$34.95</span> <span class="price-old">$39.95</span></p>
+                        <h2 class="card-title">Sporty T-Shirt</h2>
+                        <p><span class="price-new mr-2">$34.95</span> <span class="price-old">$39.95</span></p>
                     </div>
                 </div>
             </div>
@@ -107,7 +113,7 @@
                     </figure>
                     <div class="card-body items-center">
                         <h2 class="card-title">Casual Black T-Shirt</h2>
-                        <p ><span class="price-new">$29.99</span> <span class="price-old">$35.99</span></p>
+                        <p><span class="price-new mr-2">$29.99</span> <span class="price-old">$35.99</span></p>
                     </div>
                 </div>
             </div>
@@ -120,7 +126,7 @@
                     </figure>
                     <div class="card-body items-center">
                         <h2 class="card-title">Sporty Hoodie</h2>
-                        <p ><span class="price-new">$44.95</span> <span class="price-old">$49.95</span></p>
+                        <p><span class="price-new mr-2">$44.95</span> <span class="price-old">$49.95</span></p>
                     </div>
                 </div>
             </div>
@@ -133,7 +139,7 @@
                     </figure>
                     <div class="card-body items-center">
                         <h2 class="card-title text-center">Stylish Cap</h2>
-                        <p class=""><span class="price-new">$19.99</span> <span class="price-old">$24.99</span></p>
+                        <p class=""><span class="price-new mr-2">$19.99</span> <span class="price-old">$24.99</span></p>
                     </div>
                 </div>
             </div>
@@ -142,9 +148,47 @@
 
     <!-- Header Section End -->
 
+
+    <!-- Product Cards Section Start -->
+    <section class="product-section mt-28 max-w-screen-xl mx-auto px-4 py-5">
+        <div class="mb-6">
+            <h2 class="ml-3 text-5xl font-semibold">BUY 1 GET 1 FREE <br> ON <span class="font-light">BEST SELLING PRODUCTS</span></h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7" id="product-cards"></div>
+
+        <script>
+            // Product Data
+            const products = [
+                { id: 1, name: 'Stylish Cap', description: 'A comfortable short sleeve for all seasons.', price_new: '$34.95', price_old: '$39.95', image: 'https://i.ibb.co/tBvCmyd/img-6.jpg' },
+                { id: 2, name: 'Casual Black T-Shirt', description: 'A comfortable casual T-shirt for everyday wear.', price_new: '$29.99', price_old: '$35.99', image: 'https://i.ibb.co/fQpDGSH/img-9.png' },
+                { id: 3, name: 'Sporty Hoodie', description: 'Perfect for your workouts and casual outings.', price_new: '$44.95', price_old: '$49.95', image: 'https://i.ibb.co/fQpDGSH/img-9.png' },
+                { id: 4, name: 'Stylish Cap', description: 'Stylish cap to match any outfit.', price_new: '$19.99', price_old: '$24.99', image: 'https://i.ibb.co/tBvCmyd/img-6.jpg' },
+            ];
+
+            // Function to generate product cards
+            function generateProductCards() {
+                const productCardsContainer = document.getElementById('product-cards');
+                products.forEach(product => {
+                    const productCard = `
+                    <div class="card bg-white border border-8 border-slate-200 rounded-lg overflow-hidden">
+                        <img src="${product.image}" alt="${product.name}" class="h-64 object-cover w-full rounded-b" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold mb-2">${product.name}</h3>
+                            <p><span class="price-new text-black font-semibold mr-2">${product.price_new}</span> <span class="price-old text-gray-500">${product.price_old}</span></p>
+                        </div>
+                    </div>
+                `;
+                    productCardsContainer.innerHTML += productCard;
+                });
+            }
+
+            // Call the function to generate the product cards on page load
+            window.onload = generateProductCards;
+        </script>
+        <!-- Product Cards Section End -->
+
+    </section>
 </body>
 
 </html>
-
-
-
